@@ -1,3 +1,19 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+      <ion-fab-button color="light">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button color="light">
+          <ion-icon name="time-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light" (click)="addVehicleLog()">
+          <ion-icon name="car-outline"></ion-icon>
+        </ion-fab-button>
+        <!-- <ion-fab-button color="light">
+            <ion-icon name="logo-vimeo"></ion-icon>
+          </ion-fab-button> -->
+      </ion-fab-list>
+    </ion-fab>
 </ion-app>

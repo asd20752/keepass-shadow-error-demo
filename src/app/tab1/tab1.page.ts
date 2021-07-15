@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { DemoModalPage } from '../demo-modal/demo-modal.page';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private modalController: ModalController) { }
+  async openModal() {
+    let modal = await this.modalController.create({
+      component: DemoModalPage
+    })
+    modal.onDidDismiss().then((modelData) => {
+    });
 
+    return await modal.present();
+  }
 }
